@@ -85,7 +85,7 @@ https://asia-south1-docker.pkg.dev
                 ]) {
                     sh '''
                       rm -rf gitops
-git clone https://$GIT_USER:$GIT_TOKEN@github.com/ishan706045-design/charts.git gitops
+git clone https://$GIT_USER:$GIT_TOKEN@github.com/AayushChauhan1916/deveops-charts gitops
                       cd gitops
  
                       yq -y -i '.image.repository = "'$IMAGE_REPO'"' backend/values-staging.yaml
@@ -115,7 +115,7 @@ git config user.name "jenkins"
                 ]) {
                     sh '''
                       rm -rf gitops
-git clone https://$GIT_USER:$GIT_TOKEN@github.com/ishan706045-design/charts.git gitops
+git clone https://$GIT_USER:$GIT_TOKEN@github.com/AayushChauhan1916/deveops-charts gitops
                       cd gitops
  
                       yq -y -i '.image.repository = "'$IMAGE_REPO'"' backend/values-production.yaml
