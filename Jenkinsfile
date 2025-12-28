@@ -88,8 +88,8 @@ https://asia-south1-docker.pkg.dev
 git clone https://$GIT_USER:$GIT_TOKEN@github.com/AayushChauhan1916/deveops-charts gitops
                       cd gitops
  
-                      yq -y -i '.image.repository = "'$IMAGE_REPO'"' services/backend/values-staging.yaml
-                      yq -y -i '.image.tag = "'$IMAGE_TAG'"' services/backend/values-staging.yaml
+                      yq e -i '.image.repository = "'$IMAGE_REPO'"' services/backend/values-staging.yaml
+                      yq e -i '.image.tag = "'$IMAGE_TAG'"' services/backend/values-staging.yaml
  
 git config user.email "jenkins@ci"
 git config user.name "jenkins"
@@ -118,8 +118,8 @@ git config user.name "jenkins"
 git clone https://$GIT_USER:$GIT_TOKEN@github.com/AayushChauhan1916/deveops-charts gitops
                       cd gitops
  
-                      yq -y -i '.image.repository = "'$IMAGE_REPO'"' services/backend/values-production.yaml
-                      yq -y -i '.image.tag = "'$IMAGE_TAG'"' services/backend/values-production.yaml
+                      yq e -i '.image.repository = "'$IMAGE_REPO'"' services/backend/values-production.yaml
+                      yq e -i '.image.tag = "'$IMAGE_TAG'"' services/backend/values-production.yaml
  
 git config user.email "jenkins@ci"
 git config user.name "jenkins"
